@@ -3,7 +3,6 @@
 int time_spend()
 {
 	int day, hour, min, sec;
-	int temp1, temp2;
 	
 	
 	printf("\n\n\n\n\t\t\t\t\t\t\t\t\tLutfen seyehatinizin kac gun, saat, dakika ve saniye oldugunu giriniz.");
@@ -25,8 +24,8 @@ int time_spend()
 	
 	if(sec > 60)
 	{	
-		min += (sec / 60);	// kac ker bölündügü
-		sec = sec % 60; 	// artan		
+		min += (sec / 60);	
+		sec = sec % 60; 			
 	}
 
 	if(min > 60)
