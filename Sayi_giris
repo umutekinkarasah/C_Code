@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int main(){
+    int c;
+    int counter = 0;
+    int ival;
+    int sum = 0;
+
+    printf("Sayi girmek ister misiniz ? Lutfen e veya h giriniz :\n");
+
+    while ((c = getch()) == 'e' || c == 'h'){
+
+        if(c == 'e'){
+            counter++;
+            putchar(c);
+            ival = (rand() % 2 ? 1 : -1) * rand();
+            sum += ival;
+            printf("\n%d\n\n", ival);
+        }
+        if(c == 'h'){
+            putchar(c);
+            printf("\nSon...\n");
+            break;
+        }
+    }
+
+    if (counter == 0){
+        printf("\ngiris olmadi.\n");
+    }
+    else{
+        printf("\n%d adet sayi girisi oldu\n", counter);
+        printf("\nsayilarin toplami %d.\n ", sum);
+        printf("\nsayilarin ortalamasi %.2f\n ", (double)sum / counter);
+    }
+
+}
